@@ -15,6 +15,7 @@ def matrix_multiplication_concurrency(matrix_1,matrix_2,executor):
   for r, row in enumerate(matrix_1):
     columns=get_columns(matrix_2)
     executor.submit(dot_point_columns,matrix_result, r, row, columns)
+  
   return matrix_result
   
 
